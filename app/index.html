@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4.4 github</title>
+    <link rel="stylesheet" href="/octicons/octicons.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+<div class="container">
+  <div class="row">
+
+    <!-- // HEADER // -->
+
+    <div class="header col-md-12">
+        <span class="git-logo octicon octicon-mark-github"></span>
+        <div class="col-lg-4">
+          <div class="git-search input-group">
+            <input type="text" class="form-control" placeholder="Search Github">
+          </div>
+        </div>
+        <ul class="git-links">
+          <li><a href="#">Pull Requests</a></li>
+          <li><a href="#">Issues</a></li>
+          <li><a href="#">Gist</a></li>
+        </ul>
+        <span class="git-add">+<span class="caret"></span></span>
+        <div class="git-thumbnail-profile">
+          <span class="caret"></span>
+        </div>
+      </div>
+
+<!-- // MIDDLE CONTENT // -->
+
+<!-- SIDE BAR -->
+<div class="row">
+<div class="col-md-12">
+  <div class="side_bar col-md-3">
+
+    <div class="profile-pic">
+    </div>
+
+    <div class="profile-name">
+    </div>
+
+    <div class="profile-username">
+    </div>
+
+    <button class="btn btn-success">New</button>
+    <a href="https://github.com/settings/profile?focus_bio=1">Add a bio</a>
+
+    <hr />
+
+    <div class="profile-location">
+    </div>
+
+    <div class="profile-email">
+    </div>
+
+    <div class="profile-blog">
+    </div>
+
+    <div class="profile-joined">
+    </div>
+
+    <hr />
+
+      <ul>
+        <li class="followers"></li>
+        <li class="starred"></li>
+        <li class="following"></li>
+      </ul>
+
+        <hr />
+
+        <h4>Organizations</h4>
+        <div class="organizations">
+        </div>
+
+
+  </div>
+
+  <div class="tabs-section col-md-9">
+    <div class="reps col-md-12">
+      <div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><span class="octicon octicon-person"></span>
+Overview</a></li>
+    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span class="octicon octicon-repo"></span>Repositories</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><span class="octicon octicon-rss"></span>
+Puplic Activity</a></li>
+<button class="btn btn-default"><span class="octicon octicon-pencil"></span>Edit Profile</button>
+  </ul>
+    <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Search</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <span>all</span>
+  <span>all</span>
+  <span>all</span>
+  <span>all</span>
+  <span>all</span>
+  <span>all</span>
+  <span>all</span>
+
+  <hr />
+<!-- /.row -->
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="profile">
+
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="home">
+      <div>
+    </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">hi</div>
+  </div>
+
+</div>
+
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+
+
+
+<script id="profile-thumbnail-template" type="text/x-handlebars-template">
+  <img src={{'avatar_url'}} />
+</script>
+
+<script id="profile-pic-template" type="text/x-handlebars-template">
+  <img src={{'avatar_url'}} />
+</script>
+
+<script id="profile-name-template" type="text/x-handlebars-template">
+  <span>{{name}}</span>
+</script>
+
+<script id="profile-website-template" type="text/x-handlebars-template">
+  <span>{{blog}}</span>
+</script>
+
+<script id="profile-email-template" type="text/x-handlebars-template">
+  <span>{{email}}</span>
+</script>
+
+<script id="profile-username-template" type="text/x-handlebars-template">
+  <span>{{login}}</span>
+</script>
+
+<script id="profile-html-template" type="text/x-handlebars-template">
+  <span>{{html_url}}</span>
+</script>
+
+<script id="profile-location-template" type="text/x-handlebars-template">
+  <span>{{location}}</span>
+</script>
+
+<script id="profile-joined-template" type="text/x-handlebars-template">
+  <span>Joined on {{created_at}}</span>
+</script>
+
+<script id="profile-followers-template" type="text/x-handlebars-template">
+  <span>{{followers}}</span>
+</script>
+
+<script id="profile-following-template" type="text/x-handlebars-template">
+  <span>{{following}}</span>
+</script>
+
+<script id="profile-starred-template" type="text/x-handlebars-template">
+  <span>{{starred_url}}</span>
+</script>
+
+<script id="profile-organizations-template" type="text/x-handlebars-template">
+  <span>{{organizations_url}}</span>
+</script>
+
+<script id="repo-template" type="text/x-handlebars-template">
+<div class="repo-tile col-md-12">
+  <span>{{data.name}}</span>
+  <span>{{data.id}}</span>
+</div>
+</script>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

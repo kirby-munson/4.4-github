@@ -1,0 +1,125 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+
+$gray:#F3F3F3;
+$blue:#3D76C2;
+$black:#323232;
+$green:#69C83A;
+
+$main-font: 'Open Sans', sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+// header
+
+.header{
+  height: 55px;
+  background-color: $gray;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.git-logo{
+  display: inline;
+  float: left;
+}
+
+.octicon{
+  font-size: 32px;
+}
+
+.git-search{
+  display: inline;
+}
+
+.form-control{
+  height: 28px;
+  border: 1px ridge #ddd;
+  border-radius: 5%;
+}
+
+ul.git-links{
+  display: inline;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.git-links li{
+  display: inline;
+  padding: 10px;
+
+}
+
+.git-links a{
+  text-decoration: none;
+  color: $black;
+  font-family: $main-font;
+
+}
+
+.git-links a:hover{
+  color: $blue;
+}
+
+.git-add{
+  font-family: $main-font;
+  font-size: 30px;
+  margin-left: 400px;
+}
+
+
+.git-thumbnail-profile{
+  float: right;
+  width:20px;
+  img {
+    border-radius: 3px;
+  }
+}
+
+// middle content
+
+// sidebar
+
+.side_bar{
+
+}
+
+.profile-pic{
+  img{
+  border-radius: 4px;
+}
+}
+
+.profile-name{
+  font-family: $main-font;
+  font-size: 35px;
+}
+
+
+
+
+
+.tabs-section{
+  height: 500px;
+
+}
+
+.repo-tile{
+  height: 50px;
+  border: 1px solid black;
+
+}
