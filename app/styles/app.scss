@@ -24,102 +24,422 @@ img {
   max-width: 100%;
 }
 
+
+
 // header
 
+
+
 .header{
-  height: 55px;
+  height: 50px;
   background-color: $gray;
-  padding-top: 10px;
+  width: 100%;
   margin-bottom: 20px;
 }
 
-.git-logo{
-  display: inline;
+.octicon{
+  font-size: 28px;
+  line-height: 50px;
+  vertical-align: middle;
   float: left;
+  color:$black;
+  padding-right: 10px;
+  a{
+    color: $black;
+    text-decoration: none;
+  }
 }
 
-.octicon{
-  font-size: 32px;
+
+.octicon:hover{
+  color:$blue;
 }
 
 .git-search{
-  display: inline;
+  display: inline-block;
+  margin-top: 12px;
+  vertical-align: top;
+  height: 26px;
+  border: 1px solid #ddd;
 }
 
-.form-control{
-  height: 28px;
-  border: 1px ridge #ddd;
-  border-radius: 5%;
+.search.form-control{
+  height: 26px;
+  border: 1px solid #ddd;
 }
 
 ul.git-links{
-  display: inline;
   list-style: none;
-  margin-bottom: 10px;
+  padding-left: 10px;
 }
 
-.git-links li{
-  display: inline;
-  padding: 10px;
-
+.git-links-container{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
 }
 
-.git-links a{
-  text-decoration: none;
-  color: $black;
-  font-family: $main-font;
-
+.git-links{
+  li{
+    float: left;
+    padding-right: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: $black;
+    font-family: $main-font;
+  }
 }
 
 .git-links a:hover{
   color: $blue;
 }
 
-.git-add{
-  font-family: $main-font;
-  font-size: 30px;
-  margin-left: 400px;
+.git-icons-container{
+  float: right;
+  display: inline-block;
+  li{
+    float: left;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
 }
 
+.octicon-plus{
+  font-size: 18px;
+  color: $black;
+}
+
+.pic.caret{
+  margin: 12px 0px -20px 28px;
+}
+
+.pic.caret:hover{
+  color: $blue;
+}
+
+.plus.caret:hover{
+  color: $blue;
+}
+
+.caret{
+  margin: 10px 14px -22px 1px;
+}
+
+.plus.caret,
+.pic.caret{
+  color: $black;
+}
 
 .git-thumbnail-profile{
-  float: right;
   width:20px;
   img {
     border-radius: 3px;
   }
 }
 
+
+
 // middle content
 
+
 // sidebar
+
 
 .side_bar{
 
 }
 
 .profile-pic{
+  width: 230px;
+  height: 230px;
+  margin:1px 0px 8px -19px;
   img{
-  border-radius: 4px;
+  border-radius: 6px;
+  width: 100%;
 }
 }
 
 .profile-name{
   font-family: $main-font;
-  font-size: 35px;
+  font-size: 25px;
+  margin: 0px 0px -2px -20px;
 }
 
+.profile-username{
+  font-size: 19px;
+  margin: -3px 0px 0px -20px;
+  letter-spacing: .5px;
+}
 
+.side.btn{
+  height: 17px;
+  font-size: 10px;
+  font-family: $main-font;
+  width: 34px;
+  padding: 0;
+  text-transform: uppercase;
+  margin: 11px -1px 14px -19px;
+  border-radius: 1px;
+}
 
+a.side{
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
 
+hr {
+  margin-top: -3px;
+  margin-bottom: -8px;
+  padding-top: 25px;
+  margin-left: -20px;
+}
 
-.tabs-section{
-  height: 500px;
+.octicon-location{
+  font-size: 17px;
+  margin:-18px 0px -10px -18px;
+}
 
+.octicon-mail{
+  font-size: 17px;
+  margin:-16px 0px -8px -19px;
+}
+
+.octicon-link{
+  font-size: 17px;
+  margin:-17px -3px -8px -20px;
+}
+
+.octicon-clock{
+  font-size: 17px;
+  margin:-17px -4px -6px -19px;
+}
+
+ul.profile-list{
+  padding-left: 0;
+}
+
+.profile-list li{
+list-style: none;
+padding-left: 0;
+display: inline-block;
+}
+
+ul.count-list{
+  display: inline-block;
+  padding-left: 0;
+  margin:-11px 0px 0px -12px;
+  padding-bottom: 6px;
+}
+
+.count-list li{
+  display: inline-block;
+  list-style: none;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.block {
+  display: block;
+  font-size: 11px;
+}
+
+.number-color{
+  color: $blue;
+  font-size: 28px;
+  font-family: $main-font;
+}
+
+li.followers{
+  margin: 0px 0px 0px 6px;
+}
+
+li.following{
+margin: 0px 0px 0px 21px;
+}
+
+li.starred{
+margin: 0px 0px 0px 21px;
+}
+
+h4{
+  margin:0px 0px 2px -21px;
+}
+
+.organizations{
+  width: 43px;
+  height: 43px;
+  margin:1px 0px 8px -19px;
+  img{
+  border-radius: 6px;
+  width: 100%;
+}
+}
+
+// tabs section
+
+.octicon-repo{
+  font-size: 16px;
+  margin: -17px -5px -11px -4px;
+}
+
+.octicon-rss{
+font-size: 16px;
+margin: -17px -6px 0px -5px;
+}
+
+.octicon-pencil{
+font-size: 16px;
+margin: -15px -7px 0px 10px;
+}
+
+.octicon-person{
+font-size: 16px;
+margin: -17px -7px 0px 8px;
+}
+
+div.repos{
+  margin:0px 0px 0px -12px;
+  padding: 0;
+}
+
+.nav-tabs{
+  margin:0px 0px 0px -11px;
+  padding: 0;
+  margin-bottom: 10px;
+  a{
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.edit.btn{
+  float: right;
+  width: 108px;
+  font-size: 14px;
+  padding: 2px 5px 0px 0px;
+  font-family: $main-font;
+  height: 26px;
+  margin: 0px -33px 0px 0px;
+  background-color: $gray;
+}
+
+hr.repo{
+  margin-top: 10px;
+}
+
+a.repo-link{
+  text-decoration: none;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.repo-link-no{
+  padding-right: 0;
+  margin-right: 0;
+}
+
+a.main-repo-link{
+  color: $black;
+    margin-top: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.repo.btn{
+  height: 34px;
+  margin:-2px 0px 0px 6px;
+  padding:2px;
+  width: 40px;
+}
+
+div.tabs-search{
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.octicon-git-branch{
+  font-size: 12px;
+  margin-top:-16px;
+}
+
+.octicon-star{
+  font-size: 12px;
+  margin-top:-16px;
 }
 
 .repo-tile{
-  height: 50px;
-  border: 1px solid black;
+  border-bottom: 0.5px solid #ddd;
+}
 
+dl.repo-name{
+  float: left;
+  padding: 20px 0;
+}
+
+dd.repo-title{
+  font-family: $main-font;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+dl.repo-numbers{
+  display: inline;
+  float: right;
+  font-family: $main-font;
+  padding-top: 38px;
+}
+
+.repo-numbers dd{
+  display: inline-block;
+}
+
+// footer
+
+.footer-line{
+  margin-top: 20px;
+}
+
+.footer-left{
+  margin-left: 30px;
+  float: left;
+  dl{
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 12px;
+  }
+  dd{
+    display: inline;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 12px;
+  }
+  a{
+    font-size: 12px;
+  }
+}
+
+.footer-right{
+  margin-right: 30px;
+  float: right;
+  dl{
+    display: inline-block;
+    padding-top: 15px;
+  }
+  dd{
+    display: inline;
+    text-decoration: none;
+    padding: 15px;
+  }
+  a{
+    font-size: 12px;
+  }
+}
+
+.footer.octicon-mark-github{
+  margin: 0 240px;
+  font-size: 20px;
+  color: darken($gray, 15);
 }
