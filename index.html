@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4.4 github</title>
+    <link rel="stylesheet" href="/octicons/octicons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <!-- // HEADER // -->
+
+    <div class="header">
+      <div class="col-md-offset-2 col-md-8">
+      <div class="git-logo">
+        <a href="https://github.com/"><span class="octicon octicon-mark-github"></span></a>
+      </div>
+        <div class="git-search input-group col-lg-5">
+          <input type="text" class="search form-control" placeholder="Search Github">
+        </div>
+      <div class="git-links-container">
+        <ul class="git-links">
+          <li><a href="#">Pull Requests</a></li>
+          <li><a href="#">Issues</a></li>
+          <li><a href="#">Gist</a></li>
+        </ul>
+      </div>
+      <div class="git-icons-container">
+        <ul class="git-icons">
+          <li><a href="#"><span class="octicon octicon-plus"></span><span class="plus caret"></span></a></li>
+          <li><a href="#"><div class="git-thumbnail-profile"><span class="pic caret"></span></div></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- // MIDDLE CONTENT // -->
+
+<div class="container">
+  <div class="row">
+
+<!-- SIDE BAR -->
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <div class="side_bar col-md-3">
+
+      <div class="profile-pic">
+      </div>
+
+      <div class="profile-name">
+      </div>
+
+      <div class="profile-username">
+      </div>
+
+      <button class="side btn btn-success">New</button>
+      <a class="side" href="https://github.com/settings/profile?focus_bio=1">Add a bio</a>
+
+      <hr />
+      <ul class="profile-list">
+        <li><div class="profile-location"></div></li>
+
+        <li><div class="profile-email"></div></li>
+
+        <li><div class="profile-blog"></div></li>
+
+        <li><div class="profile-joined"></div></li>
+      </ul>
+
+      <hr />
+
+        <ul class="count-list">
+          <li class="followers"></li>
+          <li class="starred"></li>
+          <li class="following"></li>
+        </ul>
+
+      <hr />
+
+        <h4>Organizations</h4>
+        <div class="organizations">
+          <img src="https://avatars3.githubusercontent.com/u/17576709?v=3&s=200" />
+        </div>
+      </div>
+
+
+<!-- middle tabs section -->
+
+        <div class="tabs-section col-md-9">
+          <div class="repos col-md-12">
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab"><span class="octicon octicon-person"></span>
+                  Overview</a></li>
+                <li role="presentation" class="active"><a href="#repos" aria-controls="repos" role="tab" data-toggle="tab"><span class="octicon octicon-repo"></span>
+                  Repositories</a></li>
+                <li role="presentation"><a href="#public" aria-controls="public" role="tab" data-toggle="tab"><span class="octicon octicon-rss"></span>
+                  Public Activity</a></li>
+                <button class="edit btn btn-default"><span class="octicon octicon-pencil"></span>Edit profile</button>
+              </ul>
+
+              <div class="tabs-search col-lg-6">
+                <div class="input-group">
+                  <input type="text" class="repos form-control" placeholder="Find a repository...">
+                  <span class="input-group-btn">
+                    <button class="search btn btn-default" type="button">Search</button>
+                  </span>
+                </div>
+              </div>
+
+              <a class="main-repo-link" href="#"><span>All</span></a>
+              <a class="repo-link" href="#"><span>Public</span></a>
+              <a class="repo-link" href="#"><span>Private</span></a>
+              <a class="repo-link" href="#"><span>Sources</span></a>
+              <a class="repo-link" href="#"><span>Forks</span></a>
+              <a class="repo-link-no" href="#"><span>Mirrors</span></a>
+
+              <button class="repo btn btn-success">New</button>
+
+              <hr class="repo" />
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="overview">
+                                  <!-- repo template -->
+                </div>
+                <div role="tabpanel" class="tab-pane" id="repos">
+                </div>
+                <div role="tabpanel" class="tab-pane" id="public">
+                </div>
+              </div>
+
+              <hr />
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br />
+    <hr class="footer-line" />
+    <dd class="footer-left">
+      <dl>(c) 2016 GitHub, Inc.</dl>
+      <a href="#"><dl>Terms</dl></a>
+      <a href="#"><dl>Privacy</dl></a>
+      <a href="#"><dl>Security</dl></a>
+      <a href="#"><dl>Contact</dl></a>
+      <a href="#"><dl>Help</dl></a>
+    </dd>
+    <span class="footer octicon octicon-mark-github"></span>
+    <dd class="footer-right">
+      <a href="#"><dl>Status</dl></a>
+      <a href="#"><dl>API</dl></a>
+      <a href="#"><dl>Training</dl></a>
+      <a href="#"><dl>Shop</dl></a>
+      <a href="#"><dl>Blog</dl></a>
+      <a href="#"><dl>About</dl></a>
+    </dd>
+  </div>
+</div>
+
+
+
+
+<!-- Tab panes -->
+
+
+<script id="profile-thumbnail-template" type="text/x-handlebars-template">
+  <img src={{'avatar_url'}} />
+</script>
+
+<script id="profile-pic-template" type="text/x-handlebars-template">
+  <img src={{'avatar_url'}} />
+</script>
+
+<script id="profile-name-template" type="text/x-handlebars-template">
+  <span>{{name}}</span>
+</script>
+
+<script id="profile-website-template" type="text/x-handlebars-template">
+  <span class="octicon octicon-link"></span><span>{{blog}}</span>
+</script>
+
+<script id="profile-email-template" type="text/x-handlebars-template">
+  <span class="octicon octicon-mail"></span><span>{{email}}</span>
+</script>
+
+<script id="profile-username-template" type="text/x-handlebars-template">
+  <span>{{login}}</span>
+</script>
+
+<script id="profile-html-template" type="text/x-handlebars-template">
+  <span>{{html_url}}</span>
+</script>
+
+<script id="profile-location-template" type="text/x-handlebars-template">
+  <span class="octicon octicon-location"></span><span>{{location}}</span>
+</script>
+
+<script id="profile-joined-template" type="text/x-handlebars-template">
+  <span class="octicon octicon-clock"></span><span>Joined on {{created_at}}</span>
+</script>
+
+<script id="profile-followers-template" type="text/x-handlebars-template">
+  <span class="number-color">{{followers}}</span><span class="block">Followers</span>
+</script>
+
+<script id="profile-following-template" type="text/x-handlebars-template">
+  <span class="number-color">{{following}}</span><span class="block">Following</span>
+</script>
+
+<script id="profile-starred-template" type="text/x-handlebars-template">
+  <!-- <span>{{starred_url}}</span> --><span class="number-color">1</span><span class="block">Starred</span>
+</script>
+
+<!-- <script id="profile-organizations-template" type="text/x-handlebars-template">
+  <span>{{organizations_url}}</span>
+</script> -->
+
+<script id="repo-template" type="text/x-handlebars-template">
+<div class="repo-tile col-md-12">
+  <dl class="repo-name">
+  <dd class="repo-title"><a href="{{data.html_url}}"><span>{{data.name}}</span></a></dd>
+  <dd><span>Updated {{data.updated_at}}</span>
+</dl>
+<dl class="repo-numbers">
+  <dd><span>{{data.language}}</span></dd>
+  <dd><span class="octicon octicon-star"></span><span>{{data.stargazers_count}}</span></dd>
+  <dd><span class="octicon octicon-git-branch"></span><span>{{data.forks}}</span></dd>
+</dl>
+
+
+</div>
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
