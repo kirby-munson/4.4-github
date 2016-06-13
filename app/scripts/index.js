@@ -5,15 +5,15 @@ var _ = require('underscore');
 
 // have to use the token in the header
 
-var githubtoken = require('./git-hub.apikey.js');
-
-if(githubtoken !== undefined){
-  $.ajaxSetup({
-    headers: {
-      'Authorization': 'token ' + githubtoken.token
-    }
-  });
-}
+// var githubtoken = require('./git-hub.apikey.js');
+//
+// if(githubtoken !== undefined){
+//   $.ajaxSetup({
+//     headers: {
+//       'Authorization': 'token ' + githubtoken.token
+//     }
+//   });
+// }
 
 
 var profileUrl = 'https://api.github.com/users/kirby-munson';
@@ -26,64 +26,112 @@ var profileUrl = 'https://api.github.com/users/kirby-munson';
 
     });
 
-    $.ajax(profileUrl).done(function(data){
-      var source = $('#profile-pic-template').html();
-      var template = handlebars.compile(source);
-      var renderTemplate = template(data);
-      $('.profile-pic').append(renderTemplate);
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-pic-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.profile-pic').append(renderTemplate);
 
-      });
+    });
 
-      $.ajax(profileUrl).done(function(data){
-        var source = $('#profile-location-template').html();
-        var template = handlebars.compile(source);
-        var renderTemplate = template(data);
-        $('.profile-location').append(renderTemplate);
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-location-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.profile-location').append(renderTemplate);
 
-        });
+    });
 
 
-      $.ajax(profileUrl).done(function(data){
-        var source = $('#profile-name-template').html();
-        var template = handlebars.compile(source);
-        var renderTemplate = template(data);
-        $('.profile-name').append(renderTemplate);
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-name-template').html();
+    var template = handlebars.compile(source)
+    var renderTemplate = template(data);
+    $('.profile-name').append(renderTemplate);
 
-        });
+    });
 
-        $.ajax(profileUrl).done(function(data){
-          var source = $('#profile-username-template').html();
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-username-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.profile-username').append(renderTemplate);
+
+    });
+
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-email-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.profile-email').append(renderTemplate);
+
+    });
+
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-website-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.profile-blog').append(renderTemplate);
+
+    });
+
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-joined-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.profile-joined').append(renderTemplate);
+
+    });
+
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-followers-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.followers').append(renderTemplate);
+
+    });
+
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-following-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.following').append(renderTemplate);
+
+    });
+
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-starred-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.starred').append(renderTemplate);
+
+    });
+
+  $.ajax(profileUrl).done(function(data){
+    var source = $('#profile-organizations-template').html();
+    var template = handlebars.compile(source);
+    var renderTemplate = template(data);
+    $('.organizations').append(renderTemplate);
+
+    });
+
+
+
+    var repoUrl = profileUrl + '/repos';
+      $.ajax(repoUrl).done(function(repos){
+          _.each(repos, function(data){
+          var source = $('#repo-template').html();
           var template = handlebars.compile(source);
-          var renderTemplate = template(data);
-          $('.profile-username').append(renderTemplate);
-
+          var context = {'data': data};
+          var renderTemplate = template(context);
+          $('.tab-pane').append(renderTemplate);
           });
-
-          $.ajax(profileUrl).done(function(data){
-            var source = $('#profile-email-template').html();
-            var template = handlebars.compile(source);
-            var renderTemplate = template(data);
-            $('.profile-email').append(renderTemplate);
-
-            });
-
-            $.ajax(profileUrl).done(function(data){
-              var source = $('#profile-website-template').html();
-              var template = handlebars.compile(source);
-              var renderTemplate = template(data);
-              $('.profile-blog').append(renderTemplate);
-
-              });
+        });
 
 
 
 
-              $.ajax(profileUrl).done(function(data){
-                var source = $('#profile-joined-template').html();
-                var template = handlebars.compile(source);
-                var renderTemplate = template(data);
-                $('.profile-joined').append(renderTemplate);
-                });
+// things i can't get to work right
 
 //                 function dateFormatChange(){
 //                                 var newdate = new Date(data.created_at);
@@ -103,65 +151,7 @@ var profileUrl = 'https://api.github.com/users/kirby-munson';
 //
 //
 //
-                $.ajax(profileUrl).done(function(data){
-                  var source = $('#profile-followers-template').html();
-                  var template = handlebars.compile(source);
-                  var renderTemplate = template(data);
-                  $('.followers').append(renderTemplate);
 
-                  });
-
-                  $.ajax(profileUrl).done(function(data){
-                    var source = $('#profile-following-template').html();
-                    var template = handlebars.compile(source);
-                    var renderTemplate = template(data);
-                    $('.following').append(renderTemplate);
-
-                    });
-
-                    $.ajax(profileUrl).done(function(data){
-                      var source = $('#profile-starred-template').html();
-                      var template = handlebars.compile(source);
-                      var renderTemplate = template(data);
-                      $('.starred').append(renderTemplate);
-
-                      });
-
-                      $.ajax(profileUrl).done(function(data){
-                        var source = $('#profile-organizations-template').html();
-                        var template = handlebars.compile(source);
-                        var renderTemplate = template(data);
-                        $('.organizations').append(renderTemplate);
-
-                        });
-
-
-
-                            var repoUrl = profileUrl + '/repos';
-                                $.ajax(repoUrl).done(function(repos){
-                                   _.each(repos, function(data){
-                                  var source = $('#repo-template').html();
-                                  var template = handlebars.compile(source);
-                                  var context = {'data': data};
-                                  var renderTemplate = template(context);
-                                  $('.tab-pane').append(renderTemplate);
-                              });
-                                });
-
-
-
-
-
-
-
-                        // // _.each(data, function(data){
-                        // $.ajax(repoUrl).done(function(data){
-                        //   var source = $('#repo-template').html();
-                        //   var template = handlebars.compile(source);
-                        //   var renderTemplate = template(data);
-                        //   $('.tab-pane active').append(renderTemplate);
-                        //
-                        //   });
 
 
 
@@ -197,6 +187,10 @@ var profileUrl = 'https://api.github.com/users/kirby-munson';
 // // });
 // // }
 //
+
+
+// starwars example
+
 // // function displayPlanet(planet){
 // //   var html = template(planet);
 // //   $('.js-planet-list').append(html);
